@@ -1,18 +1,24 @@
-import './globals.css'
+import "./globals.css";
+import Header from "./header";
+import AnimatedOutlet from "./animated-outlet";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body>{children}</body>
+
+      <body className="flex justify-center min-h-screen py-80">
+        <div className="max-w-sm mx-auto bg-white shadow rounded w-full p-4">
+          <Header />
+
+          {/* <AnimatedOutlet>{children}</AnimatedOutlet> */}
+          <AnimatedOutlet />
+        </div>
+      </body>
     </html>
-  )
+  );
 }
