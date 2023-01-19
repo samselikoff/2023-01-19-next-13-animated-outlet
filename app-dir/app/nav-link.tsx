@@ -22,9 +22,9 @@ export default function NavLink({
     <div>
       <Link className={classes} href={href} {...rest} />
 
-      {active && (
+      {/* {active && (
         <motion.div layoutId="underline" className="bg-gray-500 h-1 -mb-px" />
-      )}
+      )} */}
     </div>
   );
 }

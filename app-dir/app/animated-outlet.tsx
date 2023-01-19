@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 export default function AnimatedOutlet({ children }: any) {
   let pathname = usePathname();
+  console.log(pathname);
 
   return (
     <AnimatePresence mode="wait">
